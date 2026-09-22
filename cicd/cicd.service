@@ -1,0 +1,16 @@
+[Unit]
+Description=CI/CD webhook receiver
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=student
+Group=student
+WorkingDirectory=/opt/cicd
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/cicd/venv/bin/python app.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

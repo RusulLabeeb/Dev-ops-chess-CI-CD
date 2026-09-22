@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+git fetch && git reset --hard @{u}
+
+docker compose -f compose.simple.yml up -d --build --force-recreate

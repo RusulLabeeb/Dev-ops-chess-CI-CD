@@ -1,0 +1,12 @@
+{
+    default_sni 178.18.249.160
+}
+
+https://178.18.249.160:3000 {
+    tls internal
+    reverse_proxy localhost:8081
+}
+
+:9000 {
+    reverse_proxy 127.0.0.1:5000
+}
