@@ -14,7 +14,7 @@ The project covers containerized deployment, reverse proxy configuration, HTTPS,
 
 
 
-\## 🏗️ Project Architecture
+\##  Project Architecture
 
 
 
